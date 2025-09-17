@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/09/04 19:03:37 by gmechaly          #+#    #+#              #
-#    Updated: 2025/09/17 18:32:29 by gmechaly         ###   ########.fr        #
+#    Created: 2025/09/17 20:04:40 by gmechaly          #+#    #+#              #
+#    Updated: 2025/09/17 21:48:09 by gmechaly         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= MyAwesomePhoneBook
+NAME		= BraiiiiiiinnnzzzZ
 
 CC			= c++
 
 CPPFLAGS	= -Wextra -Wall -Werror -std=c++98
 
-SRCS		= Contact.cpp PhoneBook.cpp main.cpp
+SRCS		= newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
@@ -39,5 +39,3 @@ root-fclean: root-clean
 			@rm -f $(NAME)
 			
 re: fclean all
-
-.PHONY: all clean fclean re root-clean root-fclean

@@ -5,32 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/17 18:21:19 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/09/17 18:57:01 by gmechaly         ###   ########.fr       */
+/*   Created: 2025/09/17 21:39:38 by gmechaly          #+#    #+#             */
+/*   Updated: 2025/09/17 22:03:22 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "Zombie.hpp"
 
 int	main(void) {
-	PhoneBook	pbk;
-	std::string	input;
+	Zombie	*d_john;
 
-	std::cout << "Enter command (ADD, SEARCH, EXIT): ";
-	while (getline(std::cin, input)) {
-		if (input == "ADD"){
-			Contact	newC;
-			newC.create_contact();
-			pbk.add_new_contact(newC);
-		}
-		else if (input == "SEARCH")
-			pbk.searchContact();
-		else if (input == "EXIT")
-			break ;
-		else
-			std::cout << "Invalid command." << std::endl;
-		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
-	}
-	std::cout << std::endl << "Exiting PhoneBook, thank you for using this program." << std::endl;
+	std::cout << std::left;
+	std::cout << std::setfill('-') << std::setw(60) << "-----calling newZombie()" << std::endl;
+	d_john = newZombie("Dynamic John");
+	std::cout << std::setfill('-') << std::setw(60) << "-----newZombie() has returned" << std::endl;
+
+	std::cout << std::setfill('-') << std::setw(60) << "-----calling randomChump()" << std::endl;
+	randomChump("Automatic Derrick");
+	std::cout << std::setfill('-') << std::setw(60) << "-----randomChump() has returned" << std::endl;
+
+	delete d_john;
+	
 	return (0);
 }

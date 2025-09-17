@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/04 19:27:27 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/09/17 18:35:37 by gmechaly         ###   ########.fr       */
+/*   Created: 2025/09/17 20:07:15 by gmechaly          #+#    #+#             */
+/*   Updated: 2025/09/17 21:56:41 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 # include <iostream>
 # include <string>
 # include <iomanip>
-# include <sstream>
-# include "Contact.hpp"
 
-class PhoneBook{
+class Zombie {
 	public:
-		PhoneBook();
-		~PhoneBook();
+		Zombie(void);
+		~Zombie(void);
 
-		void		add_new_contact(Contact new_contact);
-		void		displayContacts(void) const;
-		void		displayOneContact(int i) const;
-		void		searchContact(void);
-		std::string	truncName(const std::string& str) const;
-
+		void	announce(void);
+		void	set_name(std::string name);
+	
 	private:
-		Contact	_array[8];
-		int		_i;
+		std::string	name;
 };
+
+Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
