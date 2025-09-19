@@ -6,7 +6,7 @@
 #    By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/18 16:28:53 by gmechaly          #+#    #+#              #
-#    Updated: 2025/09/18 16:40:19 by gmechaly         ###   ########.fr        #
+#    Updated: 2025/09/19 17:00:42 by gmechaly         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC			= c++
 
 CPPFLAGS	= -Wextra -Wall -Werror -std=c++98
 
-SRCS		= main.cpp
+SRCS		= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
