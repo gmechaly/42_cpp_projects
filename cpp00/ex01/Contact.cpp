@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:40:37 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/09/30 18:23:20 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/09/30 20:04:56 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	Contact::set_firstname(){
 		std::cout << "Enter contact's first name : ";
 		if (std::getline(std::cin, Contact::_FirstName) && !Contact::_FirstName.empty())
 			break ;
+		if (std::cin.eof())
+			break ;
 		std::cout << "Field cannot be empty" << std::endl;
 	}
 }
@@ -35,6 +37,8 @@ void	Contact::set_lastname(){
 	while (1) {
 		std::cout << "Enter contact's last name : ";
 		if (std::getline(std::cin, Contact::_LastName) && !Contact::_LastName.empty())
+			break ;
+		if (std::cin.eof())
 			break ;
 		std::cout << "Field cannot be empty" << std::endl;
 	}
@@ -45,6 +49,8 @@ void	Contact::set_nickname(){
 		std::cout << "Enter contact's nickname : ";
 		if (std::getline(std::cin, Contact::_Nickname) && !Contact::_Nickname.empty())
 			break ;
+		if (std::cin.eof())
+			break ;
 		std::cout << "Field cannot be empty" << std::endl;
 	}
 }
@@ -53,6 +59,8 @@ void	Contact::set_secret(){
 	while (1) {
 		std::cout << "Enter contact's darkest secret : ";
 		if (std::getline(std::cin, Contact::_DarkestSecret) && !Contact::_DarkestSecret.empty())
+			break ;
+		if (std::cin.eof())
 			break ;
 		std::cout << "Field cannot be empty" << std::endl;
 	}
@@ -68,19 +76,29 @@ static int	is_number(const std::string str)
 }
 
 void	Contact::set_num(){
-	do {
+	while (1) {
 		std::cout << "Enter contact's phone number : ";
 		if (std::getline(std::cin, Contact::_PhoneNumber) && !Contact::_PhoneNumber.empty() && is_number(Contact::_PhoneNumber))
 			break ;
+		if (std::cin.eof())
+			break ;
 		std::cout << "Please enter a valid phone number" << std::endl;
-	} while (std::cin.eof());
+	}
 }
 
 void	Contact::create_contact(){
 	Contact::set_firstname();
+	if (std::cin.eof())
+		return ;
 	Contact::set_lastname();
+	if (std::cin.eof())
+		return ;
 	Contact::set_nickname();
+	if (std::cin.eof())
+		return ;
 	Contact::set_num();
+	if (std::cin.eof())
+		return ;
 	Contact::set_secret();
 	return ;
 }
