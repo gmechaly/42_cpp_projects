@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/04 19:44:21 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/09/11 20:12:46 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/09/30 18:23:24 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ class Contact {
 		std::string _PhoneNumber;
 		std::string _DarkestSecret;
 };
+
+// void	handle_eof(std::string &type, std::string print);
 
 #endif

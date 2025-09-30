@@ -6,19 +6,19 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 19:26:58 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/09/17 19:50:35 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/09/30 17:49:59 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : _i(0){
-	std::cout << "PhoneBook's constructor called" << std::endl;
+	// std::cout << "PhoneBook's constructor called" << std::endl;
 	return ;
 }
 
 PhoneBook::~PhoneBook(){
-	std::cout << "PhoneBook's destructor called" << std::endl;
+	// std::cout << "PhoneBook's destructor called" << std::endl;
 	return ;
 }
 

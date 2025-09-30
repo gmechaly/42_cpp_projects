@@ -6,19 +6,19 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 17:40:37 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/09/17 19:50:35 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/09/30 18:23:20 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact(void){
-	std::cout << "Contact's constructor called" << std::endl;
+	// std::cout << "Contact's constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact(void){
-	std::cout << "Contact's destructor called" << std::endl;
+	// std::cout << "Contact's destructor called" << std::endl;
 	return ;
 }
 
@@ -68,12 +68,12 @@ static int	is_number(const std::string str)
 }
 
 void	Contact::set_num(){
-	while (1) {
+	do {
 		std::cout << "Enter contact's phone number : ";
 		if (std::getline(std::cin, Contact::_PhoneNumber) && !Contact::_PhoneNumber.empty() && is_number(Contact::_PhoneNumber))
 			break ;
 		std::cout << "Please enter a valid phone number" << std::endl;
-	}
+	} while (std::cin.eof());
 }
 
 void	Contact::create_contact(){
@@ -105,3 +105,15 @@ std::string	Contact::get_secret() const{
 	return (Contact::_DarkestSecret);
 }
 
+// void	handle_eof(std::string &type, std::string print) {
+// 	while (type.empty()) {
+// 		if (std::cin.eof())
+// 			return ;
+// 		std::cout << "Field cannot be empty." << std::endl;
+// 		std::cout << print;
+// 		getline(std::cin, type);
+// 		if (std::cin.eof())
+// 			return ;
+// 	}
+	
+// }
