@@ -6,12 +6,12 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 16:59:37 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/14 18:51:12 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:46:22 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
 
 # include "ClapTrap.hpp"
 

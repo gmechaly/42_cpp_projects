@@ -6,12 +6,12 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 16:20:13 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/03 15:49:28 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:47:25 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_H
-# define CLAPPTRAP_H
+# define CLAPTRAP_H
 
 # include <string>
 # include <iostream>

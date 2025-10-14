@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 16:59:41 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/14 18:50:31 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/14 19:19:42 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &rhs) {
 		this->_attackDamage = rhs.getAttackDamage();
 		this->_energyPoints = rhs.getEnergyPoints();
 	}
-	std::cout << _name << ": ClapTrap assignation constructor called" << std::endl;
+	std::cout << _name << ": ScavTrap assignation constructor called" << std::endl;
 	return (*this);
 }
 
