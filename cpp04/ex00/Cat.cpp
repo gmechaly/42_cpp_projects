@@ -6,22 +6,23 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:22:54 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/15 17:39:55 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/21 19:18:18 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) {
+Cat::Cat(void) : Animal("Cat") {
 	std::cout << "Cat default constructor called" << std::endl;
 	return ;
 }
 
-Cat::Cat(std::string typeCat) : _type(typeCat) {
-	
+Cat::Cat(std::string typeCat) : Animal(typeCat) {
+	std::cout << "Cat assigned to type " << _type << std::endl;
+	return ;
 }
 
-Cat::Cat(const Cat &other) {
+Cat::Cat(const Cat &other) : Animal(other) {
 	this->_type = other.getType();
 	std::cout << "Cat copy constructor called" << std::endl;
 	return ;
@@ -39,7 +40,7 @@ Cat::~Cat(void) {
 	return ;
 }
 
-void	Animal::makeSound(void) {
-	std::cout << "Animal sound" << std::endl;
+void	Cat::makeSound(void) const {
+	std::cout << "🐱: Meooow" << std::endl;
 	return ;
 }

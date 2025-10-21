@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:15:46 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/15 17:39:55 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:56:52 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	Animal::setType(std::string newType) {
 	return ;
 }
 
-void	Animal::makeSound(void) {
+void	Animal::makeSound(void) const {
 	std::cout << "Animal sound" << std::endl;
 	return ;
 }
