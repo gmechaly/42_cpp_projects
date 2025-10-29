@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 16:19:35 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/27 20:15:44 by gmechaly         ###   ########.fr       */
+/*   Created: 2025/10/22 18:51:36 by gmechaly          #+#    #+#             */
+/*   Updated: 2025/10/22 20:00:10 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_H
+# define BRAIN_H
 
-# include "Brain.hpp"
+# include "Animal.hpp"
 
-class Cat : public Animal{
+class Brain {
 	public :
-		Cat(void);
-		Cat(std::string typeCat);
-		Cat(const Cat &other);
-		Cat &operator=(const Cat &rhs);
-		~Cat(void);
+		Brain(void);
+		Brain(const Brain &other);
+		Brain &operator=(const Brain &rhs);
+		~Brain(void);
 
-		void	makeSound(void) const;
-
+		std::string	getIdeas(int i) const;
+		void		setIdea(int i, const std::string &idea);
+		
 	private :
-		Brain	*CatBrain;
+		std::string	_ideas[100];
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:25:59 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/29 19:52:34 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:56:52 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,46 +18,35 @@
 int	main() {
 	std::cout << "========== Animals ==========" << std::endl;
 	std::cout << "-------- constructors --------" << std::endl;
-	Animal	*animals[4];
-	
-	for (int i = 0; i < 4; i++) {
-		if (i < 2)
-			animals[i] = new Dog();
-		else
-			animals[i] = new Cat();
-	}
+	// Animal	error;
+	// Animal*	error2 = new Animal(); // Does not compile: class is abstract !
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
 
 	std::cout << "\n-------- print types --------" << std::endl;
-	for (int i = 0; i < 4; i++)
-		std::cout << "Type " << i << ": " << animals[i]->getType() << " " << std::endl;
+	std::cout << "Dog type: " << dog->getType() << " " << std::endl;
+	std::cout << "Cat type: " << cat->getType() << " " << std::endl;
 
 	std::cout << "\n-------- make sounds --------" << std::endl;
-	for (int i = 0; i < 4; i++)
-		animals[i]->makeSound();
+	dog->makeSound();
+	cat->makeSound();
 
 	std::cout << "\n-------- cleanup --------" << std::endl;
-	for (int i = 0; i < 4; i++)
-		delete animals[i];
+	delete dog;
+	delete cat;
+
+	std::cout << "\n\n===== Wrong Animals =====" << std::endl;
+	std::cout << "\n-------- constructors --------" << std::endl;
+	const WrongAnimal* wrongCat = new WrongCat();
+
+	std::cout << "\n-------- print type --------" << std::endl;
+	std::cout  << "Wrong Cat type: " << wrongCat->getType() << " " << std::endl;
+		
+	std::cout << "\n-------- make sounds --------" << std::endl;
+	wrongCat->makeSound();
+
+	std::cout << "\n-------- cleanup --------" << std::endl;
+	delete wrongCat;
 
 	return (0); 
 }
-
-
-// int	main() {
-// 	const Animal* j = new Dog();
-// 	const Animal* i = new Cat();
-
-// 	std::cout << "--- DOG PART ---" << std::endl;
-// 	std::cout << "Dog type : " << j->getType() << std::endl;
-// 	j->makeSound();
-// 	std::cout << std::endl;
-	
-// 	std::cout << "--- CAT PART ---" << std::endl;
-// 	std::cout << "Cat type : " << i->getType() << std::endl;
-// 	i->makeSound();
-// 	std::cout << std::endl;
-	
-// 	delete j;
-// 	delete i;
-// 	return (0);
-// }

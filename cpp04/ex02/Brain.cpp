@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 18:55:07 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/29 15:53:32 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:03:31 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 Brain::Brain(void) {
 	std::cout << "Brain default constructor called" << std::endl;
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 100; i++)
 		this->setIdea(i, "Default domestic animal idea");
-		// std::cout << "Idea " << i << " set : " << this->getIdeas(i) << std::endl;
-	}
 	return ;
 }
 
