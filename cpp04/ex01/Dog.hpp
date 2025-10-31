@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:35:04 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/27 20:15:22 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 17:58:05 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Dog : public Animal{
 		~Dog(void);
 
 		void	makeSound(void) const;
+
+		Brain	*getBrain(void) const;
 
 	private :
 		Brain	*DogBrain;

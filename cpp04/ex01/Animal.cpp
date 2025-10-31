@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:15:46 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/27 19:04:23 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:03:45 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,9 @@ void	Animal::setType(std::string newType) {
 void	Animal::makeSound(void) const {
 	std::cout << "Animal sound" << std::endl;
 	return ;
+}
+
+Brain	*Animal::getBrain(void) const {
+	std::cout << "Objects type Animal don't have brain." << std::endl;
+	return (NULL);
 }

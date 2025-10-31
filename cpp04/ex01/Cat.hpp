@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:19:35 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/27 20:15:44 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 17:57:52 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ class Cat : public Animal{
 		Cat(const Cat &other);
 		Cat &operator=(const Cat &rhs);
 		~Cat(void);
+
+		Brain	*getBrain(void) const;
 
 		void	makeSound(void) const;
 

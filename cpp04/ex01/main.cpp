@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:25:59 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/29 19:52:34 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:10:25 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "WrongCat.hpp"
 
 int	main() {
-	std::cout << "========== Animals ==========" << std::endl;
 	std::cout << "-------- constructors --------" << std::endl;
 	Animal	*animals[4];
 	
@@ -25,6 +24,12 @@ int	main() {
 			animals[i] = new Dog();
 		else
 			animals[i] = new Cat();
+	}
+
+	std::cout << "\n-------- brain verif --------" << std::endl;
+	for (int i = 0; i < 4; i++) {
+		animals[i]->getBrain()->setIdea(i, "mmmpghhh fooood...");
+		std::cout << "idea " << i << " set for animal [" << i << "] : " << animals[i]->getBrain()->getIdeas(i) << std::endl;
 	}
 
 	std::cout << "\n-------- print types --------" << std::endl;

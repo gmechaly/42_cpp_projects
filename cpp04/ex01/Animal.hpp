@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 15:16:31 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/22 19:38:22 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 18:09:20 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <string>
 
+class Brain;
+
 class Animal {
 	public :
 		Animal(void);
@@ -24,8 +26,9 @@ class Animal {
 		Animal &operator=(const Animal &rhs);
 		virtual ~Animal(void);
 
-		std::string	getType(void) const;
-		void		setType(std::string newType);
+		std::string		getType(void) const;
+		void			setType(std::string newType);
+		virtual Brain	*getBrain(void) const;
 
 		virtual void	makeSound(void) const;
 

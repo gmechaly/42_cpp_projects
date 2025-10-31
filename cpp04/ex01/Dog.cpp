@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:36:31 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/27 20:15:25 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 17:58:20 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,8 @@ Dog::~Dog(void) {
 void	Dog::makeSound(void) const {
 	std::cout << "🐶: WOOF!" << std::endl;
 	return ;
+}
+
+Brain	*Dog::getBrain(void) const {
+	return (this->DogBrain);
 }

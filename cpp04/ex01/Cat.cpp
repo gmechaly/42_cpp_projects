@@ -6,7 +6,7 @@
 /*   By: gmechaly <gmechaly@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:22:54 by gmechaly          #+#    #+#             */
-/*   Updated: 2025/10/27 20:15:48 by gmechaly         ###   ########.fr       */
+/*   Updated: 2025/10/31 17:57:46 by gmechaly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,8 @@ Cat::~Cat(void) {
 void	Cat::makeSound(void) const {
 	std::cout << "🐱: Meooow" << std::endl;
 	return ;
+}
+
+Brain	*Cat::getBrain(void) const {
+	return (this->CatBrain);
 }
